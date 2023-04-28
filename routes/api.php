@@ -2,6 +2,9 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostApiController;
+use App\Http\Controllers\CategoryApiController;
+use App\Http\Controllers\RoleApiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +20,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::apiResource('post', PostApiController::class);
+Route::apiResource('category', CategoryApiController::class);
+Route::apiResource('role', RoleApiController::class);
+

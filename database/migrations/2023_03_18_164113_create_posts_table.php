@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('title');
             $table->biginteger('category_id')->unsigned()->nullable();
             $table->text('description');
-            $table->enum('state', ['post','no_post'])->default('no_post');
+            $table->enum('state', ['post', 'no_post'])->default('no_post');
             $table->timestamps();
         });
     }
